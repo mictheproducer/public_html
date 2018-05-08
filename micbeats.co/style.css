@@ -127,7 +127,7 @@ li a {
 }
 
 li a:hover:not(.active) {
-    /*background-color: #7d7d7d;*/
+    background-color: #7d7d7d;
     display: block;
     margin-top: 0px;
     border-top: 5px solid #eb2e2c;
@@ -144,7 +144,7 @@ li a:hover:not(.active) {
     border-top: 5px solid #eb2e2c;
 }
 
-.card {
+.mok-card {
     float: left;
     margin-right: 25px;
     margin-left: 25px;
@@ -155,7 +155,7 @@ li a:hover:not(.active) {
     border-radius: 25px;
 }
 
-.card:hover {
+.mok-card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
