@@ -1,0 +1,105 @@
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+<!-- PAGING CODE -->
+<script>
+    function show(shown, hidden) {
+        document.getElementById(shown).style.display='block';
+        document.getElementById(hidden).style.display='none';
+        return false;
+    }
+</script>
+<meta>
+<title>Michael Mok - Technical Product Manager</title>
+</head>
+<body>
+<br>
+<table width="100%" border="0">
+    <td width="25px"></td>
+    <td><img src="images/title.png"><br><p class="title">Technical Product Manager</p></td>
+</table>
+<br>
+<ul>
+    <li><p>&nbsp;&nbsp;&nbsp;&nbsp;</p></li>
+    <li><a id="projects" href="#projects" onclick="return show('Page1','Page2'); return show('Page1', 'Page3');">PROJECTS</a></li>
+    <li><a id="about" href="#about" onclick="return show('Page2','Page1'); return show('Page2', 'Page3');">ABOUT</a></li>
+    <li><a id="resume" href="#resume" onclick="return show('Page3','Page2'); return show('Page3', 'Page1')">R&#201;SUM&#201;</a></li>
+</ul>
+
+<br>
+<br>
+
+<div id="Page1">
+<div class="content1">
+<html>
+<body>
+<div class="card">
+    <a href="http://www.google.com">
+        <img src="images/op.png" alt="Origination Platform" style="width:100%">
+        <div class="container">
+            <p class="name"> ORIGINATION PATFORM</p>
+            <p class="description">CHANGING THE WORLD... ONE STUDENT LOAN AT A TIME.</p> 
+        </div>
+    </a>
+</div>
+<div class="card">
+    <a href="http://www.bing.com">
+        <img src="images/sk.png" alt="Schoold (Kickwheel)" style="width:100%">
+        <div class="container">
+            <p class="name">SCHOOLD (KICKWHEEL)</p>
+            <p class="description">DECIDING WHERE TO GO TO COLLEGE SHOULD'NT BE HARD.</p>
+        </div>
+    </a>
+</div>
+<div class="card">
+    <a href="http://www.yahoo.com">
+        <img src="images/sm.png" alt="Sharemoji" style="width:100%">
+        <div class="container">
+            <p class="name">SHAREMOJI</p>
+            <p class="description">THIS AIN'T YOUR MOMMA'S EMOJI KEYBOARD...</p> 
+        </div>
+    </a>
+</div>
+</body>
+</html>
+</div>
+</div>
+
+<div id="Page2" style="display:none">
+<div class="content2">
+<html>
+<body>
+
+<h1> ABOUT ABOUT ABOUT ABOUT </h1>
+<h1> ABOUT ABOUT ABOUT ABOUT </h1>
+<h1> ABOUT ABOUT ABOUT ABOUT </h1>
+<h1> ABOUT ABOUT ABOUT ABOUT </h1>
+<h1> ABOUT ABOUT ABOUT ABOUT </h1>
+<h1> ABOUT ABOUT ABOUT ABOUT </h1>
+<h1> ABOUT ABOUT ABOUT ABOUT </h1>
+
+        </body>
+        </html>
+	</div>
+  </div>
+
+  <div id="Page3" style="display:none">
+  	<div class="content3">
+        <html>
+        <body>
+
+<object data="files/Michael Mok - 042418.pdf" type="application/pdf" width="100%" height="100%">
+  <p>Alternative text - include a link <a href="myfile.pdf">to the PDF!</a></p>
+</object>
+
+        </body>
+        </html>
+	</div>
+  </div>
+
+
+
+</body>
+</html>

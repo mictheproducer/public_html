@@ -1,0 +1,168 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+body {
+	background-image: url("../../Downloads/Background_email.jpg");
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-size: cover;
+}
+*/
+
+.content1 {
+    background:url(https://www.schoold.co/images/patternbg.png);
+    position:relative;
+    border: 0px solid;
+    margin: 0px auto;
+}
+
+.content2 {
+    background:url(https://www.schoold.co/images/patternbg.png);
+    position:relative;
+    border: 0px solid;
+    margin: 0px auto;
+}
+
+.content3 {
+    background:url(https://www.schoold.co/images/patternbg.png);
+    position:relative;
+    border: 0px solid;
+    margin: 0px auto;
+}
+
+
+#button {
+    border-radius: 10px;
+    float: left;
+    border: none;
+    background: #e84341;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px;
+}
+
+#infobox {
+    border-radius: 25px;
+    background: #ffffff;
+    width: 75%;
+    padding: 40px;
+}
+
+#wrapper {
+    padding: 25px;
+}
+
+@font-face {
+    font-family: LetterGothicSlanted;
+    src: url('fonts/Letter Gothic Std Slanted.ttf');
+}
+
+@font-face {
+    font-family: LetterGothicMedium;
+    src: url('fonts/Letter Gothic Std Medium.ttf');
+}
+
+@font-face {
+    font-family: LetterGothicBold;
+    src: url('fonts/Letter Gothic Std Bold.ttf');
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-family: LetterGothicMedium;
+    font-size: 15px;
+}
+
+p.title {
+    font-family: LetterGothicSlanted;
+    font-size: 25px;
+    color: #000000
+}
+
+p.name {
+    font-family: LetterGothicBold;
+    font-size: 20px;
+    color: #eb2e2c;
+}
+
+p.description {
+    font-family: LetterGothicMedium;
+    font-size: 20px;
+    color: #000000;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #555555;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+li {
+    float: left;
+    display: block;
+    color: white;
+    font-family: LetterGothicMedium;
+    text-align: center;
+    text-decoration: none;
+    border-right: 1px solid #ffffff;
+}
+
+li a {
+    border-top: 5px solid #555555;
+    display: block;
+    color: white;
+    font-family: LetterGothicMedium;
+    text-align: center;
+    padding: 14px 16px;
+    padding-top: 9px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    /*background-color: #7d7d7d;*/
+    display: block;
+    margin-top: 0px;
+    border-top: 5px solid #eb2e2c;
+    width: 60px
+    color: #7d7d7d;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 300ms;
+    -webkit-transition-timing-function: ease;
+    -webkit-transition-delay: 0;
+}
+
+.active {
+    background-color: #ff0000;
+    border-top: 5px solid #eb2e2c;
+}
+
+.card {
+    float: left;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 400px;
+    border-radius: 25px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+.container {
+    padding: 2px 16px;
+}
