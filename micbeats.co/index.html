@@ -2,6 +2,11 @@
 <head>
 
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
 <!-- PAGING CODE -->
 <script>
@@ -10,6 +15,16 @@
         document.getElementById(hidden).style.display='none';
         return false;
     }
+
+    function openModal() {
+      $('#cardModal').on('show.bs.modal', function (event) {
+        var anchor = $(event.relatedTarget); // Anchor tag that triggered the modal
+        var imgsrc = anchor.data('imgsrc'); // Extract info from data-* attributes
+        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+        document.getElementById('modalImage').src = imgsrc;
+      })
+    }
+
 </script>
 <meta>
 <title>Michael Mok - Technical Product Manager</title>
@@ -23,81 +38,79 @@
 <br>
 <ul>
     <li><p>&nbsp;&nbsp;&nbsp;&nbsp;</p></li>
-    <li><a id="projects" href="#projects" onclick="return show('Page1','Page2'); return show('Page1', 'Page3');">PROJECTS</a></li>
-    <li><a id="about" href="#about" onclick="return show('Page2','Page1'); return show('Page2', 'Page3');">ABOUT</a></li>
-    <li><a id="resume" href="#resume" onclick="return show('Page3','Page2'); return show('Page3', 'Page1')">R&#201;SUM&#201;</a></li>
+    <li><a id="projects" href="#projects" onclick="show('Page1','Page2'); show('Page1', 'Page3');">PROJECTS</a></li>
+    <li><a id="about" href="#about" onclick="show('Page2','Page1'); show('Page2', 'Page3');">ABOUT</a></li>
+    <li><a id="resume" href="#resume" onclick="show('Page3','Page2'); show('Page3', 'Page1')">R&#201;SUM&#201;</a></li>
 </ul>
 
 <br>
 <br>
 
 <div id="Page1">
-<div class="content1">
-<html>
-<body>
-<div class="card">
-    <a href="http://www.google.com">
-        <img src="images/op.png" alt="Origination Platform" style="width:100%">
-        <div class="container">
-            <p class="name"> ORIGINATION PATFORM</p>
-            <p class="description">CHANGING THE WORLD... ONE STUDENT LOAN AT A TIME.</p> 
-        </div>
-    </a>
-</div>
-<div class="card">
-    <a href="http://www.bing.com">
-        <img src="images/sk.png" alt="Schoold (Kickwheel)" style="width:100%">
-        <div class="container">
-            <p class="name">SCHOOLD (KICKWHEEL)</p>
-            <p class="description">DECIDING WHERE TO GO TO COLLEGE SHOULD'NT BE HARD.</p>
-        </div>
-    </a>
-</div>
-<div class="card">
-    <a href="http://www.yahoo.com">
-        <img src="images/sm.png" alt="Sharemoji" style="width:100%">
-        <div class="container">
-            <p class="name">SHAREMOJI</p>
-            <p class="description">THIS AIN'T YOUR MOMMA'S EMOJI KEYBOARD...</p> 
-        </div>
-    </a>
-</div>
-</body>
-</html>
-</div>
+  <div class="content1">
+    <div class="card">
+        <a data-target="#cardModal" data-toggle="modal" data-imgsrc="images/op.png" href="#cardModal" onclick="openModal()">
+            <img src="images/op.png" alt="Origination Platform" style="width:100%">
+            <div class="container">
+                <p class="name"> ORIGINATION PATFORM</p>
+                <p class="description">CHANGING THE WORLD... ONE STUDENT LOAN AT A TIME.</p>
+            </div>
+        </a>
+    </div>
+    <div class="card">
+        <a data-target="#cardModal" data-toggle="modal" data-imgsrc="images/sk.png" href="#cardModal" onclick="openModal()">
+            <img src="images/sk.png" alt="Schoold (Kickwheel)" style="width:100%">
+            <div class="container">
+                <p class="name">SCHOOLD (KICKWHEEL)</p>
+                <p class="description">DECIDING WHERE TO GO TO COLLEGE SHOULD'NT BE HARD.</p>
+            </div>
+        </a>
+    </div>
+    <div class="card">
+        <a data-target="#cardModal" data-toggle="modal" data-imgsrc="images/sm.png" href="#cardModal" onclick="openModal()">
+            <img src="images/sm.png" alt="Sharemoji" style="width:100%">
+            <div class="container">
+                <p class="name">SHAREMOJI</p>
+                <p class="description">THIS AIN'T YOUR MOMMA'S EMOJI KEYBOARD...</p>
+            </div>
+        </a>
+    </div>
+    <div class="modal fade" id="cardModal" tabindex="-1" role="dialog" aria-labelledby="cardModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img src="images/op.png" id="modalImage">
+          </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div id="Page2" style="display:none">
 <div class="content2">
-<html>
-<body>
 
-<h1> ABOUT ABOUT ABOUT ABOUT </h1>
-<h1> ABOUT ABOUT ABOUT ABOUT </h1>
-<h1> ABOUT ABOUT ABOUT ABOUT </h1>
-<h1> ABOUT ABOUT ABOUT ABOUT </h1>
-<h1> ABOUT ABOUT ABOUT ABOUT </h1>
-<h1> ABOUT ABOUT ABOUT ABOUT </h1>
-<h1> ABOUT ABOUT ABOUT ABOUT </h1>
+  <h1> ABOUT ABOUT ABOUT ABOUT </h1>
+  <h1> ABOUT ABOUT ABOUT ABOUT </h1>
+  <h1> ABOUT ABOUT ABOUT ABOUT </h1>
+  <h1> ABOUT ABOUT ABOUT ABOUT </h1>
+  <h1> ABOUT ABOUT ABOUT ABOUT </h1>
+  <h1> ABOUT ABOUT ABOUT ABOUT </h1>
+  <h1> ABOUT ABOUT ABOUT ABOUT </h1>
 
-        </body>
-        </html>
 	</div>
+</div>
+
+<div id="Page3" style="display:none">
+  <div class="content3">
+
+    <object data="files/Michael Mok - 042418.pdf" type="application/pdf"
+    width="100%" height="100%">
+      <p>Alternative text - include a link
+        <a href="myfile.pdf">to the PDF!</a></p>
+    </object>
+
   </div>
-
-  <div id="Page3" style="display:none">
-  	<div class="content3">
-        <html>
-        <body>
-
-<object data="files/Michael Mok - 042418.pdf" type="application/pdf" width="100%" height="100%">
-  <p>Alternative text - include a link <a href="myfile.pdf">to the PDF!</a></p>
-</object>
-
-        </body>
-        </html>
-	</div>
-  </div>
+</div>
 
 
 
